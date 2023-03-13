@@ -3,28 +3,30 @@
  const phoneNumber = document.getElementById("phoneNum");
  const phoneRegEx = new RegExp(/^[0-9]{11}$/);
  const passWord = document.getElementById("pwrd");
- const pattern = Element.getAttribute("pattern")
+ //const pattern = Element.getAttribute("pattern")
+
+ console.log(myNam)
 
 
 //  FOR NAME
  myNam.addEventListener("change", () => {
-    if(myNam.value.includes("@")) {
-        alert("symbols not needed in this section")
-    }
     if(myNam.value.length < 3) {
         alert("Name is less than three characters");
+    }
+    if(myNam.value.includes("@")) {
+        alert("symbols not needed in this section")
     }
  })
 
 
-//  FOR EMAIL
+// //  FOR EMAIL
 email.addEventListener("change", () => {
     if(!email.value.includes("@")) {
         alert("Invalid email")
     }
 })
 
-// FOR PHONE NUMBER
+// // FOR PHONE NUMBER
 phoneNumber.addEventListener("change", () => {
      
     if(!phoneNumber.value.includes([+234])) {
@@ -40,7 +42,7 @@ phoneNumber.addEventListener("change", () => {
     
 })
 
-// FOR PASSWORD
+// // FOR PASSWORD
 passWord.addEventListener("change", () => {
     if(passWord.value.length < 5) {
         alert("minimum of 5 characters needed")
