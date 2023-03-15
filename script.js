@@ -1,7 +1,7 @@
  const myNam = document.getElementById("Name");
  const email = document.getElementById("Email");
  const phoneNumber = document.getElementById("phoneNum");
- const phoneRegEx = new RegExp(/^[0-9]{11}$/);
+//  const phoneRegEx = new RegExp(/^[0-9]{11}$/);
  const passWord = document.getElementById("pwrd");
  //const pattern = Element.getAttribute("pattern")
 
@@ -33,7 +33,7 @@ phoneNumber.addEventListener("change", () => {
         alert("input your country code")
     }else{return true};
 
-    if(phoneNumber.value.length != 10) {
+    if(phoneNumber.value.length != 10 ) {
         alert("invalid phone number")
     }
     if(!phoneNumber.test(phoneNumber.value)) {
